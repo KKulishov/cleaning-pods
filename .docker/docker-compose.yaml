@@ -1,0 +1,12 @@
+version: '3.8'
+
+networks:
+  dl_default:
+    external: true
+
+services:    
+  cleaning-pods:
+    build:
+      context: $PWD
+      dockerfile: .docker/cleaning-pods/Dockerfile
+    image: docker.io/s-devops/cleaning-pods:0.1
