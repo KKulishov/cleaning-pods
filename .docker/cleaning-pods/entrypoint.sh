@@ -5,5 +5,5 @@ if [[ ! -z "$1" ]]; then
     echo ${*}
     exec  ${*}
 else
-    python /app/lib/main.py
+    /usr/local/bin/python /app/lib/main.py
 fi

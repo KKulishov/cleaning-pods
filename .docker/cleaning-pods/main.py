@@ -1,6 +1,12 @@
 from kubernetes import client, config
 from kubernetes.client.rest import ApiException
 
+## TODO 
+## add if enviroment OFF or excluded namespace 
+
+## dop logs
+## add metrics , count Evicted pods 
+
 def get_all_evicted_pods(api_instance):
     all_evicted_pods = []
     try:

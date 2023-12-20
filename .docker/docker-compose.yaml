@@ -9,4 +9,4 @@ services:
     build:
       context: $PWD
       dockerfile: .docker/cleaning-pods/Dockerfile
-    image: docker.io/s-devops/cleaning-pods:0.1
+    image: ghcr.io/kkulishov/cleaning-pods/cleaning-pods:0.3
