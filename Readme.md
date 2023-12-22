@@ -17,3 +17,6 @@ docker-compose build
 kubectl create ns devops
 helm upgrade --install cleaning -n devops ./kube/cleaning/
 ```
+
+
+[alternativa](https://github.com/gianlucam76/k8s-cleaner/tree/main)
