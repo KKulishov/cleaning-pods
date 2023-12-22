@@ -17,8 +17,3 @@ docker-compose build
 kubectl create ns devops
 helm upgrade --install cleaning -n devops ./kube/cleaning/
 ```
-
-## TODO
-1. add rbac cluster role
-2. add networkpolice
-
