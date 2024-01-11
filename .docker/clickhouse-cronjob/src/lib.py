@@ -37,9 +37,11 @@ def optimizate_table(namedb, namespace, db_name, name_table):
             client.command(query)
             print(f"Оптимизация в БД:{namedb} в таблице: {name_table} запущена")
 
-def delete_old_data (namedb, namespace, table, count_days):
-    parameters = {'table_db': table, 'count': count_days}
-    query = 'DELETE FROM %(table_db)s WHERE Timestamp < now() - toIntervalDay(%(count)s);'
+def delete_old_data (namedb, namespace, table, params,  count_days):
+    #parameters = {'table_db': table, 'parameters': params, 'count': count_days}
+    #query = 'DELETE FROM %(table_db)s WHERE %(parameters)s < now() - toIntervalDay(%(count)s)'
     with db_connect(namedb, namespace) as client: 
-        client.query(query, parameters=parameters)
+        #client.query(query, parameters=parameters)
+        query_1 = 'DELETE FROM ' + table + ' WHERE ' + params + ' < now() - toIntervalDay(' + count_days + ')'
+        client.command(query_1)
         print(f"Удаление старых данных в БД:{namedb} в таблице: {table} старше {count_days} дней выполнена")
