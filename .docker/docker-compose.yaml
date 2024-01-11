@@ -9,4 +9,9 @@ services:
     build:
       context: $PWD
       dockerfile: .docker/cleaning-pods/Dockerfile
-    image: ghcr.io/kkulishov/cleaning-pods/cleaning-pods:0.3
+    image: ${IMAGE_REGISTRY}:${IMAGE_TAG}
+  clickhouse-cronjob:
+    build:
+      context: $PWD
+      dockerfile: .docker/clickhouse-cronjob/Dockerfile
+    image: ${IMAGE_REGISTRY_CH_JOB}:${CH_JOB_TAG}    
