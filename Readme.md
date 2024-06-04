@@ -2,6 +2,21 @@
 
 delete subs in status Failed, for execution frequency we use CronJob
 
+
+To exclude namespace from deleting a pod with Failed status, you need to specify which namespace is added in the .kube/cleaning/values.yaml variable. to exceptions
+
+```
+Exception_ns: "infra"
+```
+
+can be passed as a list separated by commas, example:
+
+```
+Exception_ns: "infra, lala, gaga"
+```
+
+## on the basis of which the project was compiled
+
 use lib kubernetes 
 
 [off_docs](https://kubernetes.readthedocs.io/en/latest/README.html)
