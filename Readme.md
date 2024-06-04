@@ -9,6 +9,7 @@ To exclude namespace from deleting a pod with Failed status, you need to specify
 Exception_ns: "infra"
 ```
 
+
 can be passed as a list separated by commas, example:
 
 ```
